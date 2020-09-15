@@ -1,0 +1,73 @@
+﻿
+
+@model List<MVCRegistration.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+@foreach (var item in Model)
+{
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => item.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => item.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => item.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => item.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => item.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => item.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => item.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => item.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => item.Immunization)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => item.Immunization)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => item.Other)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => item.Other)
+        </dd>
+
+    </dl>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = item.Sid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+    }

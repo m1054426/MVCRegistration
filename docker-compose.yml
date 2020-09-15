@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  mvcregistration:
+    image: mvcregistration
+    build:
+      context: .\MVCRegistration
+      dockerfile: Dockerfile
